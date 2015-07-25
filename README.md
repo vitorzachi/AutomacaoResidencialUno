@@ -1,10 +1,10 @@
 # AutomacaoResidencialUno
 
-Projeto android para ligar lampadas em uma casa. Comunica com bluetooth via Arduino. _<br />
+Projeto android para ligar lampadas em uma casa. Comunica com bluetooth via Arduino. <br />
 
-Integrantes: _<br />
+Integrantes: <br />
 
-Jackson de Marco _<br />
-Junior Dias _<br />
-Raphael Silveira _<br />
-Vitor Zachi Junior _<br />
+Jackson de Marco <br />
+Junior Dias <br />
+Raphael Silveira <br />
+Vitor Zachi Junior <br />
