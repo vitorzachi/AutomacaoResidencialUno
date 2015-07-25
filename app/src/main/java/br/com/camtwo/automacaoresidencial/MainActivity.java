@@ -243,10 +243,8 @@ public class MainActivity extends Activity {
             if (b != null) {
                 if (c == '1') {
                     b.setBackgroundColor(Color.parseColor("#74e174"));
-                    Toast.makeText(this, b.getText() + " ligado", Toast.LENGTH_SHORT).show();
                 } else {
                     b.setBackgroundColor(Color.GRAY);
-                    Toast.makeText(this, b.getText() + " desligado", Toast.LENGTH_SHORT).show();
                 }
             }
         }
