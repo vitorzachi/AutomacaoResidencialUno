@@ -101,6 +101,7 @@ public class MainActivity extends Activity {
         } catch (Exception ex) {
             int i = 0;
             Log.e("BLUE", "erro", ex);
+            myLabel.setText(ex.getMessage());
         }
     }
 
@@ -110,12 +111,9 @@ public class MainActivity extends Activity {
     }
 
     void postexecute() {
-        openButton.setEnabled(true);
+
         (findViewById(R.id.progressBar)).setVisibility(View.GONE);
-        myLabel.setText("Conexão estabelecida");
-        openButton.setText("Conectado");
-        openButton.setEnabled(false);
-        closeButton.setText("Desconectar");
+
         habilitaBotoes();
     }
 
@@ -158,6 +156,8 @@ public class MainActivity extends Activity {
 
         } catch (NullPointerException e) {
             Log.e("BLUE", "ERRO", e);
+        }catch (IOException e) {
+            myLabel.setText(e.getMessage());
         }
     }
 
@@ -253,6 +253,10 @@ public class MainActivity extends Activity {
     }
 
     void desabilitaBotoes() {
+
+        openButton.setText("Conectar");
+        openButton.setEnabled(true);
+        closeButton.setText("Desconectado");
         (findViewById(R.id.solteiro)).setEnabled(false);
         findViewById(R.id.casal).setEnabled(false);
         findViewById(R.id.sala).setEnabled(false);
@@ -262,6 +266,10 @@ public class MainActivity extends Activity {
     }
 
     void habilitaBotoes() {
+        myLabel.setText("Conexão estabelecida");
+        openButton.setText("Conectado");
+        openButton.setEnabled(false);
+        closeButton.setText("Desconectar");
         (findViewById(R.id.solteiro)).setEnabled(true);
         findViewById(R.id.casal).setEnabled(true);
         findViewById(R.id.sala).setEnabled(true);
